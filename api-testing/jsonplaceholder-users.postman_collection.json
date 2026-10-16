@@ -70,6 +70,46 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "Create user - valid",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 201\", function () {\n    pm.response.to.have.status(201);\n});\n\npm.test(\"Response contains the sent name\", function (){\n    const data = pm.response.json();\n    pm.expect(data.name).to.eql(\"David QA\");\n});\n\npm.test(\"Server assigned an id\", function () {\n    const data = pm.response.json();\n    pm.expect(data.id).to.exist;\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"David QA\",\n  \"username\": \"davidqa\",\n  \"email\": \"david@example.com\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users"
+          ]
+        }
+      },
+      "response": []
     }
   ]
 }
