@@ -20,7 +20,7 @@ Experienced working in Agile environments (Scrum, with Kanban), collaborating cl
 _Coming soon_
 
 ### 🔌 API Testing (Postman)
-Postman collection against the public JSONPlaceholder API, covering a positive case (200 + response body validation) and a negative case (404), with automated tests.
+Postman collection against the public JSONPlaceholder API, covering GET requests (positive and negative cases) and a POST request, with automated tests for status codes and response bodies. Uses a collection variable for the base URL.
 
 📁 [`api-testing/`](api-testing/)
 
