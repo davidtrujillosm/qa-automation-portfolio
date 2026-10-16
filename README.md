@@ -20,7 +20,9 @@ Experienced working in Agile environments (Scrum, with Kanban), collaborating cl
 _Coming soon_
 
 ### 🔌 API Testing (Postman)
-_Coming soon_
+Postman collection against the public JSONPlaceholder API, covering a positive case (200 + response body validation) and a negative case (404), with automated tests.
+
+📁 [`api-testing/`](api-testing/)
 
 ## Tech Stack
 
