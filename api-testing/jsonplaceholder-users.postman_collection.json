@@ -24,12 +24,9 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "https://jsonplaceholder.typicode.com/users/1",
-          "protocol": "https",
+          "raw": "{{baseUrl}}/users/1",
           "host": [
-            "jsonplaceholder",
-            "typicode",
-            "com"
+            "{{baseUrl}}"
           ],
           "path": [
             "users",
@@ -56,12 +53,9 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "https://jsonplaceholder.typicode.com/users/9999",
-          "protocol": "https",
+          "raw": "{{baseUrl}}/users/9999",
           "host": [
-            "jsonplaceholder",
-            "typicode",
-            "com"
+            "{{baseUrl}}"
           ],
           "path": [
             "users",
@@ -79,7 +73,7 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "pm.test(\"Status code is 201\", function () {\n    pm.response.to.have.status(201);\n});\n\npm.test(\"Response contains the sent name\", function (){\n    const data = pm.response.json();\n    pm.expect(data.name).to.eql(\"David QA\");\n});\n\npm.test(\"Server assigned an id\", function () {\n    const data = pm.response.json();\n    pm.expect(data.id).to.exist;\n});"
+              "pm.test(\"Status code is 201\", function () {\n    pm.response.to.have.status(201);\n});\n\npm.test(\"Response contains the sent name\", function (){\n    const data = pm.response.json();\n    pm.expect(data.name).to.eql(\"David QA\");\n});\n\npm.test(\"Username is 'davidqa'\", function (){\n    const data = pm.response.json();\n    pm.expect(data.username).to.eql(\"davidqa\");\n});\n\npm.test(\"Server assigned an id\", function () {\n    const data = pm.response.json();\n    pm.expect(data.id).to.exist;\n});\n\npm.test(\"email contains @\", function () {\n    const data = pm.response.json();\n    pm.expect(data.email).to.include(\"@\");\n});"
             ]
           }
         }
@@ -97,12 +91,9 @@
           }
         },
         "url": {
-          "raw": "https://jsonplaceholder.typicode.com/users",
-          "protocol": "https",
+          "raw": "{{baseUrl}}/users",
           "host": [
-            "jsonplaceholder",
-            "typicode",
-            "com"
+            "{{baseUrl}}"
           ],
           "path": [
             "users"
@@ -110,6 +101,12 @@
         }
       },
       "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": ""
     }
   ]
 }
