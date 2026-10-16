@@ -2,9 +2,7 @@
   "info": {
     "_postman_id": "bc6f9358-7810-4efe-8d35-b7c2257bf466",
     "name": "JSONPlaceholder Users API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "54315564",
-    "_collection_link": "https://go.postman.co/collection/54315564-bc6f9358-7810-4efe-8d35-b7c2257bf466?source=collection_link"
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
     {
@@ -106,7 +104,7 @@
   "variable": [
     {
       "key": "baseUrl",
-      "value": ""
+      "value": "https://jsonplaceholder.typicode.com"
     }
   ]
 }
