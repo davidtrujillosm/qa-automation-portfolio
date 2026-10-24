@@ -17,7 +17,9 @@ Experienced working in Agile environments (Scrum, with Kanban), collaborating cl
 ## Projects
 
 ### 🎭 UI Testing (Playwright)
-_Coming soon_
+End-to-end tests written with Playwright and TypeScript against the public Sauce Demo store. Currently covers a login flow, verifying both the resulting URL and the page title. Locators use the site's `data-test` attributes.
+
+📁 [`ui-testing/`](ui-testing/)
 
 ### 🔌 API Testing (Postman)
 Postman collection against the public JSONPlaceholder API, covering GET requests (positive and negative cases) and a POST request, with automated tests for status codes and response bodies. Uses a collection variable for the base URL.
